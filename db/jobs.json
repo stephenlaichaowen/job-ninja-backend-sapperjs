@@ -1,0 +1,20 @@
+[
+  {
+    "id": "5e8e8d4d-7809-461d-8491-1b1b8b6c7e78",
+    "title": "Turrle Ninja",
+    "salary": 85000,
+    "details": "Mutant Turtle Ninja"
+  },
+  {
+    "id": "c549cb7f-7088-43d9-a5a2-1408e13147ca",
+    "title": "Net Ninja",
+    "salary": 90000,
+    "details": "Net Patrol"
+  },
+  {
+    "id": "98c90438-0cff-46b3-9772-56eedf734aa7",
+    "title": "Pocket Ninja",
+    "salary": 80000,
+    "details": "A member of pocket monsters"
+  }
+]
