@@ -1,6 +1,6 @@
 const fs = require('fs')
 const { v4: uuidv4 } = require('uuid')
-let jobs = JSON.parse(fs.readFileSync(`db/jobs.json`)) || []
+let jobs = JSON.parse(fs.readFileSync('../db/jobs.json')) || []
 
 exports.getJobs = (req, res) => {
   res.json(jobs)
