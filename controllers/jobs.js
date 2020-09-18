@@ -41,8 +41,6 @@ exports.updateSingleJob = (req, res) => {
   if (salary) job.salary = salary
   if (details) job.details = details
 
-  console.log(job)
-
   fs.writeFileSync(`db/jobs.json`, JSON.stringify(jobs, null, 2))
   res.json(jobs)
 }
