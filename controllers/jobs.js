@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid')
 let jobs = JSON.parse(fs.readFileSync(`db/jobs.json`)) || []
 
 exports.getJobs = (req, res) => {
-  res.json(jobs)
+  res.json({ jobs })
 }
 
 exports.createJob = (req, res) => {
@@ -16,14 +16,12 @@ exports.createJob = (req, res) => {
   res.json(jobs)
 }
 
-// use array.find() to find single record
 exports.getSingleJob =  (req, res) => {
   const { id } = req.params
   const foundJob = jobs.find(job => job.id === id)
   res.json(foundJob)
 }
 
-// use array.filter() to delete record
 exports.deleteSingleJob = (req, res) => {
   const { id } = req.params
   jobs = jobs.filter(job => job.id !== id)
@@ -31,7 +29,6 @@ exports.deleteSingleJob = (req, res) => {
   res.json(jobs)
 }
 
-// use array.find() to update single record
 exports.updateSingleJob = (req, res) => {
   const { id } = req.params
   const { title, salary, details } = req.body
