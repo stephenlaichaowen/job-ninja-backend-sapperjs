@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid')
 let jobs = JSON.parse(fs.readFileSync(`db/jobs.json`)) || []
 
 exports.getJobs = (req, res) => {
-  res.json({ jobs })
+  res.json(jobs)
 }
 
 exports.createJob = (req, res) => {
